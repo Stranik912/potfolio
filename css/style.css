@@ -1,0 +1,45 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.conteiner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+}
+.nav_item {
+  text-decoration-line: none;
+  padding-right: 15px;
+}
+
+.name {
+  font-size: 28px;
+  line-height: 150%;
+  color: #010101;
+}
+
+.title-h1 {
+  font-weight: bold;
+  font-size: 74px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=style.css.map */

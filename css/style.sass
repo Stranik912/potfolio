@@ -1,32 +1,67 @@
+$white: #FFFFFF
+$red: #D40000
+$black: #232326
+$beige: #F3F2F0
 body
-  padding: 0
-  margin: 0
   font-family: 'Inter', sans-serif
 
-ul
-  padding: 0
-  margin: 0
+.dark
+  background-color: $black
+  color: $beige
 
-.conteiner
+  & .nav__link
+    color: $beige
+
+.light
+  background-color: $beige
+  color: $black
+
+  & .nav__link
+    color: $black
+
+.wrapper
   max-width: 1140px
   margin: 0 auto
+  padding-right: 15px
+  padding-left: 15px
 
-.heading
+.header
   display: flex
   justify-content: space-between
+  padding-top: 40px
+  padding-bottom: 60px
 
 .nav
   list-style: none
   display: flex
+  padding-left: 0
+  margin: 0
 
-  &_item
+  &__items
+    padding-left: 16px
+    padding-right: 16px
+
+  &__items:first-child
+    padding-left: 0
+
+  &__items:last-child
+    padding-right: 0
+
+  &__link
     text-decoration-line: none
-    padding-right: 15px
+    font-size: 14px
+    line-height: 150%
+
+  &__link:hover
+    color: $red
+
+.photo
+  margin-bottom: 120px
+  width: 100%
 
 .name
   font-size: 28px
   line-height: 150%
-  color: #010101
 
 .title-h1
   font-weight: bold

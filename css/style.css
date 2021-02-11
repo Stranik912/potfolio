@@ -96,6 +96,10 @@ body {
   width: 100%;
 }
 
+.main {
+  position: relative;
+}
+
 .name {
   font-size: 28px;
   line-height: 150%;
@@ -148,7 +152,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.skill.title-h3 {
+.skill .title-h3 {
   text-transform: uppercase;
 }
 
@@ -159,10 +163,21 @@ body {
 .circle_main {
   height: 253px;
   width: 253px;
+  position: absolute;
+  left: 100px;
+  top: 0;
+  z-index: 1;
 }
 .circle_nav {
   width: 106px;
   height: 106px;
+}
+
+.triangle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
 }
 
 /*# sourceMappingURL=style.css.map */

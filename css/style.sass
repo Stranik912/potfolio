@@ -89,12 +89,12 @@ body
   &_info &__items:first-child::before
     display: none
 
-
-
 .photo
   margin-bottom: 120px
   width: 100%
 
+.main
+  position: relative
 .name
   font-size: 28px
   line-height: 150%
@@ -141,9 +141,8 @@ body
   line-height: 150%
   letter-spacing: 0.03em
 
-.skill.title-h3
+.skill .title-h3
   text-transform: uppercase
-
 .skill.description
   line-height: 150%
 
@@ -151,10 +150,21 @@ body
   &_main
     height: 253px
     width: 253px
+    position: absolute
+    left: 100px
+    top: 0
+    z-index: 1
 
   &_nav
     width: 106px
     height: 106px
+
+.triangle
+  position: absolute
+  left: 0
+  top: 0
+  z-index: -2
+
 
 
 

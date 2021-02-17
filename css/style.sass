@@ -12,6 +12,9 @@ body
   background-color: $black
   color: $beige
 
+  & .social, & .steps__item, & .about_title, & .about_description
+    border-bottom: 1px solid $beige
+
   & .nav__link
     color: $beige
 
@@ -20,6 +23,9 @@ body
 
   & .triangle path
     fill: $white
+
+  & .steps__item:first-child
+    border-top: 1px solid $beige
 
 .light
   background-color: $beige
@@ -36,6 +42,12 @@ body
 
   & .triangle path
     fill: $red
+
+  & .social, & .steps__item, & .about_title, & .about_description
+    border-bottom: 1px solid $black
+
+  & .steps__item:first-child
+    border-top: 1px solid $black
 
 .wrapper
   max-width: 1140px
@@ -69,6 +81,7 @@ body
     text-decoration-line: none
     font-size: 14px
     line-height: 150%
+    transition: 0.2s color ease
 
   &__link:hover
     color: $red
@@ -95,9 +108,16 @@ body
 
 .main
   position: relative
+
+.main .title-h1
+  position: relative
+  z-index: 3
+
 .name
   font-size: 28px
   line-height: 150%
+  position: relative
+  z-index: 3
 
 .title-h1
   font-weight: bold
@@ -112,6 +132,9 @@ body
   padding-bottom: 60px
   margin-top: 100px
 
+  &__items:last-child
+    position: relative
+
 .project
   margin: 0
   font-weight: bold
@@ -120,6 +143,12 @@ body
   color: $beige
   display: flex
   align-items: center
+  transition: 0.2s border-bottom ease
+  border-bottom: 2px solid transparent
+  padding-bottom: 11px
+
+  &:hover
+    border-bottom: 2px solid $beige
 
   &__img
     width: 16px
@@ -131,9 +160,10 @@ body
 .skill
   display: flex
   justify-content: space-between
+  padding-top: 60px
 
   &__items
-    flex: 0 0 24%
+    flex: 0 0 21%
 
 .title-h3
   font-weight: bold
@@ -143,27 +173,104 @@ body
 
 .skill .title-h3
   text-transform: uppercase
+
 .skill.description
   line-height: 150%
+
+.about
+  display: grid
+  grid-template: 349px/repeat(4,1fr)
+
+  &_title
+    grid-column: 1/3
+    grid-row: 1/2
+    font-weight: bold
+    font-size: 28px
+    line-height: 150%
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    padding-top: 62px
+    padding-bottom: 62px
+
+  &_description
+    grid-column: 3/5
+    grid-row: 1/2
+    font-size: 28px
+    line-height: 150%
+    opacity: 0.8
+    padding: 62px 10px 62px 20px
+
+  &_01
+    grid-column: 3/4
+    grid-row: 2/3
+    padding: 65px 20px 35px 20px
+
+  &_02
+    grid-column: 4/5
+    grid-row: 2/3
+    padding: 65px 10px 35px 10px
+
+  &_03
+    grid-column: 3/4
+    grid-row: 3/4
+    padding: 35px 20px
+
+  &_04
+    grid-column: 4/5
+    grid-row: 3/4
+    padding: 35px 10px 35px 10px
+
+  &_items &_description
+    line-height: 150%
+    opacity: 0.8
+
+
+.section-steps
+  padding-top: 180px
+  padding-bottom: 198px
+
+.steps
+  &__item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 15px
+    padding-bottom: 15px
+
+  &__title
+    font-size: 28px
+    line-height: 150%
+
+  &__title span
+    margin-right: 45px
+
+  &__description
+    font-size: 16px
+    flex: 0 0 49%
+    max-width: 49%
+
 
 .circle
   &_main
     height: 253px
     width: 253px
     position: absolute
-    left: 100px
-    top: 0
+    left: -128px
+    top: calc(50% - 126px)
     z-index: 1
 
   &_nav
     width: 106px
     height: 106px
+    position: absolute
+    right: 38px
+    top: calc(50% - 60px)
 
 .triangle
   position: absolute
-  left: 0
+  left: -151px
   top: 0
-  z-index: -2
+  z-index: 2
 
 
 
